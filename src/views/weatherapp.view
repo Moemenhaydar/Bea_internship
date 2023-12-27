@@ -1,0 +1,253 @@
+<style>
+    .contain {
+        background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    }
+
+    /*.weather-app{}S
+    */
+    .search-input-btn {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-inputs {
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-deg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .wind-deg-city {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wind {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 5rem;
+    }
+
+    .all-days {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .first-day {
+        width: 12rem;
+    }
+
+    @media screen and (max-width:1000px) {
+        .all-days {
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .icon-deg {
+
+            flex-direction: column;
+        }
+    }
+</style>
+<div class="contain">
+    <div class="weather-app pv40 ph40" bind="data">
+        <div class="search-input-btn      ">
+            <div class="search-inputs w60 pv10 bgw70  round2x m_mw100">
+                <input type="text " class="input-search w90  b0 bgt fs16 m_m_pl5" placeholder="Enter yout city name"
+                    onkeyup="tapEnter(event)">
+                <button class="search-btn fs0 bgt b0 pointer m_m_pr10" @click="getWeather()"><span
+                        class="mdi mdi-magnify fs26  "></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="city-day l cw pv40">
+            <h1 class="city-name cap fs34 m_m_fs26 ">{{data.city.name}}</h1>
+            <p class="day-p cap fs26 m_m_fs22">{{formattedDate}}</p>
+        </div>
+        <div class="icon-deg ">
+            <div class="wind-deg-city w50 m_w100">
+                <div class="icon-span fs0 l">
+                    <span class="mdi mdi-weather-cloudy fs140 cw m_fs100"></span>
+                </div>
+                <div class="degree l pl20 cw">
+                    <p class="p-deg fs50 m_fs30">{{data.list.0.main.temp}}&deg;</p>
+                    <p class="desc-deg fs22 cap m_fs18">{{data.list.0.weather.0.description}}</p>
+                </div>
+            </div>
+            <div class="wind-contain w50 cw bgw20 round2x n100 m_w100">
+                <div class="wind   ">
+                    <div class="wind-deg">
+                        <p class="wind-deg-p fs18 m_m_fs16">{{data.list.0.main.temp_max}}&deg;</p>
+                        <p class="wind-hight cap fs16 m_m_fs15">hight</p>
+                    </div>
+                    <div class="wind-speed">
+                        <p class="wind-deg-p fs18 m_m_fs16">{{data.list.0.wind.speed}}mph</p>
+                        <p class="wind-hight cap fs16 m_m_fs16">wind</p>
+                    </div>
+                    <div class="sunrise">
+                        <p class="wind-deg-p fs18 m_m_fs16">5:40</p>
+                        <p class="wind-hight cap fs16 m_m_fs16">sunrise</p>
+                    </div>
+                </div>
+                <div class="wind  round2x ">
+                    <div class="wind-deg">
+                        <p class="wind-deg-p fs18 m_m_fs16">{{data.list.0.main.temp_min}}&deg;</p>
+                        <p class="wind-hight cap fs16 m_m_fs16">low</p>
+                    </div>
+                    <div class="wind-speed">
+                        <p class="wind-deg-p fs18 m_m_fs16">{{data.list.0.clouds.all}}%</p>
+                        <p class="wind-hight cap fs16 m_m_fs16">{{data.list.0.weather.0.main}}</p>
+                    </div>
+                    <div class="sunrise">
+                        <p class="wind-deg-p fs18 m_m_fs16">7:40</p>
+                        <p class="wind-hight cap fs16 m_m_fs16">sunset</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weekdays-contain cw">
+            <h1 class="all-days-h1 cap l n100 fs26 pv20 m_c">all days</h1>
+            <div class="all-days">
+                <div class="first-day cw bgw20 round2x n100 pv20 m_m_mw100   " :for="data.list as dayObj">
+                    <h2 class="day-h2 cap fs18 n100 w100 ph10 l c">{{dayObj.dt_txt}}</h2>
+                    <div class="icon-week fs28 pv10">
+                        <span class="mdi mdi-weather-sunny"></span>
+                    </div>
+
+                    <div class="day-degree fs16 pv10">D: 17&deg;</div>
+                    <div class="day-degree fs16">N: 14&deg;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var i = 0;
+    var apiKey = "3ffcc572f1b1c74bf4050edb1173a294";
+    var city = "lebanon";
+
+    var apiURL = `/forecast?q=${city}&units=metric&cnt=7&appid=${apiKey}`;
+    var weekdays = {
+    };
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";
+
+    function formatCurrentDate(currentDate) {
+        var options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        return currentDate.toLocaleDateString('en-US', options);
+    }
+
+    var formattedDate = formatCurrentDate(new Date());
+    cl("Formatted Date:", formattedDate);
+
+
+
+
+    var date_time = {};
+
+    //https://api.openweathermap.org/data/2.5/forecast?q=lebanon&units=metric&cnt=7&appid=3ffcc572f1b1c74bf4050edb1173a294
+    var data = [];
+    API.get(apiURL, {})
+        .then((res) => {
+            data = res;
+            cl(data)
+
+        }).catch((err) => {
+            cl(err)
+        });
+
+    function tapEnter(ev) {
+        if (ev.key == 'Enter') {
+            getWeather();
+        }
+    }
+    function Days() {
+        weekdays = {
+            date: data.list.dt_txt,
+
+        }
+        for (let i = 0; i < data.list.length; i++) {
+            const DateList = data.list[i].dt_txt;
+            console.log(`Forecast ${i + 1} - DateList: ${DateList}`);
+        }
+    }
+    function weatherTimes() {
+        daynight = {
+            timeDay: data.list.main.temp_max,
+            timeNight: data.list.main.temp_min,
+        }
+    }
+    function getWeather() {
+        var searchBox = document.querySelector(".input-search").value;
+        city = searchBox; // Update the city with user input
+
+        var temp_max = {};
+        var temp_min = {};
+        var dt_txt = {};
+        var date = {};
+        if (globals.date) {
+            date = globals.date;
+        }
+
+        API.get(apiURL, {})
+            .then((res) => {
+                data = res;
+                cl(data)
+                for (let i = 0; i < data.list.length; i++) {
+                    date_time = data.list[i].dt_txt.trim().split(" ");
+                    cl(date_time, "testing")
+
+                    dt_txt = {
+                        "date": date_time[0],
+                        "time": date_time[1],
+                    }
+                    date[`${i}`] = dt_txt;
+                    globals.date = date;
+
+                }
+                cl(date);
+                if (!city) {
+                    console.log("Please provide a city.");
+                    return;
+                }
+            }
+            );
+
+        //var res=  fetch(apiURL   + `&appid=${apiKey}`);
+        if (!city == "") {
+            API.get(`/forecast?q=${city}&units=metric&cnt=7&appid=${apiKey}`, {})
+                .then((res) => {
+                    data = res;
+                    cl(data);
+                }).catch((err) => {
+                    cl(err)
+                });
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+</script>

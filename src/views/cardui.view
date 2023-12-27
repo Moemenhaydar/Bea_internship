@@ -1,0 +1,261 @@
+<style>
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: black;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    .slider.rounded {
+        border-radius: 2rem;
+    }
+
+    .slider.rounded:before {
+        border-radius: 50%;
+    }
+
+    @media screen and (max-width:850px) {
+
+        .attach-contain,
+        .energy-contain,
+        .box-contain {
+            width: 13%;
+            padding: 3px;
+        }
+    }
+</style>
+<div class="bgb">
+    <div class="container border bgw ">
+        <div class="header-content ">
+            <grid_nm>
+                <div class="header w80 vm">
+                    <div class="header-top upper ph5 l">
+                        <grid_nm>
+                            <div class="header-h1 fs24 w25  l   vm pr5 b700 m_fs18 m_w30 m_m_w40">avg-19822</div>
+                            <div class="span-header w25   vm  l m_w40 m_m_w50">
+                                <span class="mdi mdi-triangle-small-up fs18 m_fs14 vm  " style="color: blue;"></span>
+                                <span class="mdi mdi-lightning-bolt fs18 vm  " style="color: yellow;"></span>
+                                <span class="mdi mdi-circle-small cb40 fs28 l  b900"></span>
+                                <span class="header-vga fs14 cb40 w35  vm b900 ">vda1.30</span>
+                            </div>
+                        </grid_nm>
+                    </div>
+                    <div class="header-btm l cap w80">
+                        <grid_nm>
+                            <div class="light-span   w25 ">
+                                <grid_nm>
+                                    <span class="mdi mdi-light-flood-up cb40  vm b900 fs18 pr5 "></span>
+                                    <div class="light-p b700 vm  fs18 m_fs14">light</div>
+                                </grid_nm>
+                            </div>
+                            <div class="online-contain  w25 ph5   vm border round2x mr10 m_m_w45">
+                                <grid_nm class="pv3">
+                                    <div class="online-circle sq roundc  vm  "
+                                        style="background-color:rgb(120, 194, 120); width:10px; "></div>
+                                    <div class="online-p b700 fs18  vm ph5 m_fs14 m_m_w30">online</div>
+                                </grid_nm>
+                            </div>
+                            <div class="online-contain ph5 w25  vm border round2x pv3 m_m_w45">
+                                <div class="online-p b700 fs18  vm ph5 m_fs14 ">in fleet</div>
+                            </div>
+                        </grid_nm>
+                    </div>
+                </div>
+                <div class="header-close vm">
+                    <span class="mdi mdi-close fs16 w20 bgb20 cw80  ph10 pv8 roundc vm"></span>
+                </div>
+            </grid_nm>
+        </div>
+        <div class="icons-text cap b700 pv30">
+            <grid_nm>
+                <div class="manual-icon w25 c">
+                    <span class="mdi mdi-plus-circle fs50"></span>
+                    <div class="manual-h1 cb50 fs18 ">manual</div>
+                </div>
+                <div class="charge-icon w25 c">
+                    <span class="mdi mdi-pause-circle-outline  fs50 cb50"></span>
+                    <div class="charge-h1 cb50 fs18 ">charge</div>
+                </div>
+                <div class="alpha-icon w25 c">
+                    <span class="mdi mdi-alpha-p-circle-outline fs50 cb50"></span>
+                    <div class="alpha-h1 cb50 fs18 ">park</div>
+                </div>
+                <div class="follow-icon w25 c">
+                    <span class="mdi mdi-bookmark-outline fs50 cb50"></span>
+                    <div class="follow-h1 cb50 fs18 ">follow</div>
+
+                </div>
+            </grid_nm>
+
+        </div>
+        <grid_nm class=" pv20 cap  cb50 border round ">
+            <div class="capacity-conatin w30 l b700 ">
+                <grid_nm class="cb80 ">
+                    <span class="mdi mdi-battery-70   fs26"></span>
+                    <div class="battery-70  cb80 fs18 vm">70%</div>
+
+                </grid_nm>
+                <div class="capacity-h1 cb50 fs18  ">capacity</div>
+            </div>
+            <div class="mode w30 fs18 c b700">
+                <div class="autamatic-h1 cb80 pb5">automatic</div>
+                <div class="operation-auto  cb50  ">operating mode</div>
+            </div>
+            <div class="partiall w30 r b700 ">
+                <grid_nm>
+                    <span class="mdi mdi-circle-half fs26  " style="color: blue;"></span>
+                    <div class="partiall-h1 vm cb80 fs18">partially</div>
+                </grid_nm>
+                <div class="loaded-p cb50 fs18">loaded</div>
+
+            </div>
+        </grid_nm>
+        <div class="pt40">
+            <grid_nm class="pv40 border roundt ph30">
+                <div class="syn-content-top w70 l   ">
+                    <grid_nm class="syn-icons l  ">
+                        <span class="mdi mdi-book-multiple fs18 cb40 bgb30 round2x ph5 b600"></span>
+                        <div class="syn-p upper fs24 cb80 b700 vm ph10 ">syn-19872</div>
+                        <span class="mdi mdi-google-circles fs18 b700" style="color: blue;"></span>
+                    </grid_nm>
+                    <div class="syn-content-btm l">
+                        <grid_nm>
+                            <div class="d52-p upper cb40 b700 vm  fs20  ">d52...4565</div>
+                            <span class="mdi mdi-image-filter-none fs18 cb40  round2x ph10"></span>
+                        </grid_nm>
+                    </div>
+
+                </div>
+                <div class="vt w30 r">
+                    <label class="switch ">
+                        <input type="checkbox" checked>
+                        <span class="slider rounded"></span>
+                    </label>
+                </div>
+            </grid_nm>
+        </div>
+        <div class="info-content cap b600 ph30 border bt0 roundb pv20">
+            <grid_nm class=" pv10">
+                <div class="position  cb40  w50 fs20 l ">position</div>
+                <div class="position-number cb80 w50 fs20 r">0.87m/76.5m/4500</div>
+            </grid_nm>
+            <grid_nm class=" pv10">
+                <div class="serial  cb40  w50 fs20 l ">vDA serial</div>
+                <div class="serial-number cb80 w50 fs20 r">no.s-09757999</div>
+            </grid_nm>
+            <grid_nm class=" pv10">
+                <div class="order  cb40  w50 fs20 l ">order mode</div>
+                <div class="order-number cb80 w50 fs20 r">automatic</div>
+            </grid_nm>
+            <grid_nm class=" pv10">
+                <div class="vendor  cb40  w50 fs20 l ">vendor</div>
+                <div class="vendor-number cb80 w50 fs20 r upper">synaos</div>
+            </grid_nm>
+        </div>
+        <div class="related-orders cap pv30">
+            <div class="related-h1 fs20 b700 cb40 l upper pv20">related orders</div>
+            <div class="orders-contain  bgb5">
+                <div class="transport-order ph20 roundt bb0   l border">
+                    <grid_nm class="ph20  pv10 ">
+                        <div class="order-nb w50 l">
+                            <span class="mdi mdi-alpha-t-box  fs30" style="color: rgb(235, 145, 145);"></span>
+                            <div class="alpha-nb cb80 w50 g vm fs20 b700">0x979...u29865</div>
+                        </div>
+                        <div class="w50 fs18  " style="color: red;">
+                            <div class="bgw ph15 border round right"><span
+                                    class="mdi mdi-circle-medium vt r  "></span>+15
+                            </div>
+                        </div>
+                    </grid_nm>
+                    <grid_nm class="ph20 pv10">
+                        <div class="transport-situation w50 cb40  w50 fs18 l ">transport order</div>
+                        <div class="forecast w50 cb40  w50 fs18 r">forecast</div>
+                    </grid_nm>
+
+                </div>
+                <div class="border ph20">
+                    <grid_nm class="ph20 pv10 b600">
+                        <div class="hours-start w50 fs18 l cb80 ">12:30 <span class="fs14"
+                                style="color: green;">started</span></div>
+                        <div class="hours-end w50 fs18 r cb80"><span class="fs14">in progres</span> 1:00</div>
+                    </grid_nm>
+                    <grid_nm class="upper b600 ph20">
+                        <div class="income w33 fs18 l cb80 "><span
+                                class="mdi mdi-arrow-top-right fs14 cb40 vm ph5"></span>r928876</div>
+                        <div class="span-come w33  ">
+                            <span class="mdi mdi-transit-connection-horizontal fs28"></span>
+                        </div>
+                        <div class="outcome w33 fs18 r cb80"><span
+                                class="mdi mdi-arrow-bottom-right-thin fs14 ph5 cb40"></span>hs87787</div>
+
+                    </grid_nm>
+                    <grid_nm class="b600 ph20 pb10">
+                        <div class="origin w50 fs16 cb40 l"> orgin</div>
+                        <div class="destination w50 fs16 cb40 r"> destination</div>
+                    </grid_nm>
+                </div>
+                <grid_nm class="border p20 bt0 l ">
+                    <div class="box-contain border p10 bgw round2x w10 c ">
+                        <span class="mdi mdi-archive-outline cb40 fs22"></span>
+                        <div class="g_nm vm b700 fs18">1/2</div>
+                    </div>
+                    <div class="attach-contain border p10 bgw round2x ml10 mr10 w10 c">
+                        <span class="mdi mdi-content-save cb40 fs22"></span>
+                        <div class="g_nm vm b700 fs18">2</div>
+                    </div>
+                    <div class="energy-contain border p10 bgw round2x w10 c ">
+                        <span class="mdi mdi-lightning-bolt cb40 fs22"></span>
+                        <div class="g_nm vm b700 fs18">2/5</div>
+                    </div>
+                </grid_nm>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>

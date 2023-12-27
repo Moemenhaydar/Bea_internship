@@ -1,0 +1,37 @@
+<div>
+    <h1 class="pv100">
+        taleb  
+    </h1>
+    <input type="text" class="input-search">
+    <button @click="get">submit</button>
+</div>
+
+
+<script>
+
+    var apiKey = "3ffcc572f1b1c74bf4050edb1173a294";
+    var city = document.querySelector(".input-search").value || "lebanon";
+    var apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=7&appid=${apiKey}`;
+
+
+    var data = [];
+    API.get(apiURL, {})
+    .then((res) => {
+        data = res;
+        cl(data,"moe")    
+        
+    }).catch((err) => {
+        cl(err) });
+        function getWeather(){
+            //var res=  fetch(apiURL   + `&appid=${apiKey}`);
+            if(!city==""){
+                API.get(apiURL, {})
+                .then((res) => {
+                    data = res;
+                    cl(data);
+                }).catch((err) => {
+                    cl(err) });
+            }
+        else{ cl("error")}}
+
+</script>

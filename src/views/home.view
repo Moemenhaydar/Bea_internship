@@ -1,0 +1,39 @@
+<style></style>
+<div class="name">
+  <p>
+    <span id="op"></span>
+    <span>S</span>
+    <ul>
+      <li value="3" ></li>
+      <li></li>
+    </ul>    
+  </p class="4">
+</div>
+<script>
+   
+     
+  function extractHtmlTagsWithAttributes(html) {
+    var regex = /<(?<tag>\w+)([^>]*)>/g;
+    var tagsWithAttributes = [];
+    var match;
+  
+    while ((match = regex.exec(html)) !== null) {
+      var tag = match[1].toLowerCase();
+      var attributes = match[2].trim(); // Get attributes and remove leading/trailing spaces
+      if (attributes !== "") {
+        tagsWithAttributes.push({ tag, attributes });
+      }
+  
+    }
+  
+    return tagsWithAttributes;
+  } 
+  
+  // Example usage: Get the HTML content from the <body> element
+  var htmlContent = document.body.innerHTML;
+  
+  // Example usage: Call the function to extract HTML tags with attributes
+  var tagsWithAttributes = extractHtmlTagsWithAttributes(htmlContent);
+  console.log(tagsWithAttributes);
+   
+</script> 

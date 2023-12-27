@@ -1,0 +1,15 @@
+<style></style>
+<div bind="myVar">
+    <button class="g_nm ph30 pv10 b round fs16 pointer sbtn warning" type="submit" style="border:none;" @click="myVar++">
+        <span>myVar</span>
+    </button>
+    <span class="fs25">{{myVar}}</span>
+</div>
+<script>
+    var myVar = 1;
+    watch = {
+        'myVar': function () {
+        alert('changing');
+        }
+    };
+</script>

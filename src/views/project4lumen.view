@@ -1,0 +1,148 @@
+<style>
+    
+    .list-container{
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.7511379551820728) 35%, rgba(0,212,255,1) 100%);
+        min-height: 40vh;
+        
+    }
+    .list-h1{
+        color: beige;
+    }
+    .input-contain{
+    display: flex;
+    justify-content: space-between;
+    
+    
+    }
+    .input-text{
+        height: 3rem;
+        background-color:white;
+        
+    }
+    .isCheck{
+        text-decoration: line-through;
+        color:#555;
+        
+
+    }
+    .list-ul{
+        list-style-type: none;
+    }
+    .btn-add{
+        border-radius: 50%;
+        width: 3rem;
+        aspect-ratio: 1/1;
+
+    }
+    .input-checkbox {
+        accent-color: black;
+        width: 15px;
+        aspect-ratio: 1/1;
+
+    }
+    .list-li{
+        display: flex;
+        justify-content: space-between;
+    }
+    .list-li span{
+        color :gainsboro;
+        /*background-color: #555;
+        width: 2.5rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;*/
+        text-align: center;
+        vertical-align: middle;
+
+
+    }
+    .have-todo,.done-h2{
+        color: beige;
+    }
+    .btn-add:hover{
+        background-color: rgb(33, 22, 82);
+        color: beige;
+        transition: all 0.2s;
+
+    }
+    .mdi-trash-can:hover{
+        color: black;
+        transition: all 0.2s;
+    }
+</style>
+<div  class="contain pv20">
+    <div class="list-container w60 center ch round2x" >
+        <h1 class="list-h1 cap pv20">to do list</h1>
+        <div class="input-contain pv10 ph20">
+            <input type="text" class="input-text round2x w70 b0 pl20 pointer " onkeyup="tapEnter(event)"  placeholder="Enter Your Text" required>
+            <button class="btn-add w20 b0 center fs0 pointer " @click="AddTasks"><span class="mdi mdi-plus fs24 center    "></span>
+            </button>
+        </div>
+        <div class="list-check l ph10 pv10">
+            <h2 class="have-todo cap pl10 pv10">list to do </h2>
+            <ul class="list-ul pv10" id="list-container">
+                <!-- <li class="list-li" for:"4">
+                    <div class="input-label">
+                        <input type="checkbox" name="" id="input-check" class="input-checkbox ">
+                        <label for="input-check" class="input-label pl10 white b">hello</label>
+                    </div>
+                    <span class="mdi mdi-trash-can  fs22 pr20 pointer "></span>
+                </li> -->
+            </ul>
+        </div>
+        <div class="checked-list l ph10 pv10">
+            <h2 class="done-h2 cap pl10 pv10">Done Tasks</h2>
+            <ul class="list-ul pv10">
+                <li class="list-li " :for="todo.list"  >
+                    <div class="input-label">
+                        <input type="checkbox" name="" id="input-check" class="input-checkbox ">
+                        <label for="input-check " class="input-label  isCheck pl10 white b">mistar</label>
+                    </div>
+                    <span class="mdi mdi-trash-can  fs22 pr20 pointer "></span>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script>
+    inputCheck=document.querySelector(".input-text");
+    listContainer=document.getElementById("list-container");
+    var Todo={
+        list:{},
+    };
+    
+    var i=0;
+    if(globals.Todo){
+        Todo=globals.Todo;
+        console.log(inputCheck);
+    }
+    function tapEnter(ev){
+        if(ev.key=='Enter'){
+            AddTasks();
+        }
+    }
+    function AddTasks(){
+        if(!inputCheck.value){
+            alert("Please enter a task");
+            //console.log("Please enter a task");
+        }else{
+        let li=document.createElement("li");
+        li.className = 'list-li';
+        li.innerHTML=inputCheck.value;
+        listContainer.appendChild(li);
+
+        }
+        inputCheck.value="";
+        var key = `${inputCheck.value}::${Math.round(Math.random()(10*5),0)}`;
+        var list={
+            name: inputCheck.value,
+        };
+        Todo[key] = list;
+        globals.Todo=Todo;
+        inputCheck.value="";
+
+
+    }
+    
+</script>

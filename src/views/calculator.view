@@ -1,0 +1,116 @@
+<style>
+    .contain {
+        background: rgb(42, 135, 170);
+        background: linear-gradient(148deg, rgba(42, 135, 170, 1) 9%, rgba(28, 92, 101, 1) 42%, rgba(4, 8, 9, 1) 100%);
+    }
+
+    .input-numbers {
+        overflow: hidden;
+    }
+
+    .equal {
+        background-color: #25B6AA;
+        border-bottom-right-radius: 0.9rem;
+    }
+
+    .calculator input {
+        border: none;
+    }
+
+    .plus,
+    .slash,
+    .moinus,
+    .fois {
+        background-color: #075156;
+    }
+</style>
+<div class="contain w40   border round4x g_nm c vm ">
+    <div bind class="calculator pt40  round4x  ">
+        <div class="screen ">
+            <grid_nm class="p20">
+                <div class="history-clear w30 l cap fs16 b700 pointer">
+                    <div class="history cw60 pt border w30 c round2x bgb20 ">his</div>
+                    <input type="button" class="clear cb80 w30  bgt b pt30 c" @click="numbersValue" value="DEL">
+                </div>
+                <div class="output w70 r vt   b600">
+                    <input placeholder="0" class="prev-out pv10 cw70 ph20 bgt r fs16">
+                    <input placeholder="0" class="output pv10 cw  fs20  ph20 bgt r fs18">
+                </div>
+            </grid_nm>
+        </div>
+        <div class="input-numbers  ">
+            <div class="inputs-1">
+                <grid_nm class="bb">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br   pv10 w25"
+                        value="AC">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="+/-">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="%">
+                    <input type="button" @click="numbersValue" class="pointer c plus  bgw40 cw fs18 b700   pv10 w25"
+                        value="+">
+                </grid_nm>
+                <grid_nm class="bb">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="1">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700  br pv10 w25"
+                        value="2">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700  br pv10 w25"
+                        value="3">
+                    <input type="button" @click="numbersValue" class="pointer c moinus  bgw40 cw fs18 b700   pv10 w25"
+                        value="-">
+                </grid_nm>
+                <grid_nm class="bb">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="4">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="6">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="6">
+                    <input type="button" @click="numbersValue" class="pointer c fois  bgw40 cw fs18 b700   pv10 w25"
+                        value="x">
+                </grid_nm>
+                <grid_nm class="bb">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="7">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="8">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w25"
+                        value="9">
+                    <input type="button" @click="numbersValue" class="pointer c slash  bgw40 cw fs18 b700   pv10 w25"
+                        value="/">
+                </grid_nm>
+                <grid_nm class=" ">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br  pv10 w30"
+                        value="0">
+                    <input type="button" @click="numbersValue" class="pointer c  bgw40 cw80 fs18 b700 br pv10 w30"
+                        value=".">
+                    <input type="button" @click="numbersValue" class="pointer c equal  bgw40 cw80 fs18 b700  pv10 w40"
+                        value="=">
+                </grid_nm>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //var currentInput = '';
+    //var operator = '';
+    function numbersValue(ev, el) {
+        var value = $(el).val()
+        var currentOutput = $(el).closest('.calculator').find('.output').val();
+        if (value === 'AC') {
+            currentOutput = ''
+        } else if (value === 'DEL') {
+            currentOutput = currentOutput.slice(0, -1)
+        } else if (value === '%' && currentInput !== '') {
+            // Calculate percentage of the current input
+            currentInput = (parseFloat(currentInput) / 100).toString();
+        }
+        else {
+            currentOutput += value
+        }
+        $('.output').val(currentOutput);
+        $(el).closest('.calculator').find('.output').val();
+    }
+
+</script>

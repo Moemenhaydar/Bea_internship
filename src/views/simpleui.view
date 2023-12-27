@@ -1,0 +1,204 @@
+<style>
+    @media screen and (max-width:580px) {
+        .card_for {
+            width: 70%;
+        }
+    }
+</style>
+<div class="content">
+    <div class="contain bgb5">
+        <div class=" header  flexi ">
+            <div class="navbar fs0    ">
+                <div class="div-h1 fs16 vm w50 g_nm m_fs14 m_m_fs12">
+                    <h1 class="h1-logo cap b i  l  ">moemen</h1>
+                </div>
+                <div class="option-btn vm g_nm w50 r ">
+                    <select name="select" id="select"
+                        class="select-nav w20 pointer g_nm cap sq mr10 bgt round2x b0 m_w30 m_m_w45">
+                        <option value="select" :required> select</option>
+                    </select>
+                    <button
+                        class="nav-btn cap  w20 round2x g_nm  pointer b0 bgb80 bold cw pv5 m_30 m_m_w45">join</button>
+                </div>
+            </div>
+            <div class="land-page fs0 w100 pv80">
+                <div class="land-desc  w50 g_nm vm  l cap m_w80 m_c m_m_w90 ">
+                    <h1 class="desc-h1 fs28 g_nm cb80 m_fs26 ">saving our planet together,
+                        one challengeat a time.
+                    </h1>
+                    <div class="desc-p fs20 g_nm pv20 cb50 lh30 b500 m_fs18	">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Aperiam quasi optio dicta veniam officiis blanditiis iste ratione, voluptates,
+                        fugiat.</div>
+                    <button class="desc-btn cap sq40 fs14 bgb80 b0 ph20 cw round2x pointer b">learn more</button>
+                </div>
+                <div class="land-image w50  g_nm  md_vt  ">
+                    <img src="../images/One-Piece-Full-Cast-Header-Image.webp" alt=""
+                        class="img-land  border w60 bgb20 vm sq90 w50 round2x m_h ">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="flexi">
+        <div class="community-contain l fs0 pv50 m_c ">
+            <div class="community-desc fs0 pv30 w50 m_w100">
+                <h1 class="community-h1 fs26 cap cb80 m_fs24">join the global earth tibe community</h1>
+                <div class="community-p fs18 lh30 pv20 cb50 b500 m_fs16">Lorem ipsum dolor sit amet consectetur
+                    adipisicing
+                    elit. Accusantium deserunt recusandae velit. Accusantium deserunt recusandae velit.</div>
+            </div>
+            <grid_nm bind>
+
+
+                <div class="card_for   w33   pv10 pr25 m_w50 m_pv20" :for="3">
+                    <div class="image-contain-community bgb30  sq70 round2x ">
+                        <img src="" alt="" class="img-community w100">
+                    </div>
+                    <div class="card-desc ">
+                        <h1 class="card-h1 fs24 pv20 cap cb80 m_fs22 ">champions for nature challenge</h1>
+                        <div class="card-p fs16 cb50 b500 m_m_fs14">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Maxime, aliquam sit magni ullam odio eligendi assumenda blanditiis reprehenderit unde a
+                            accusamus, praesentium, quaerat necessitatibus tempora. Ex labore accusantium iure
+                            voluptatem!</div>
+                    </div>
+                    <div class="images-card pv20">
+                        <img src="../images/one-piece-virtud.jpg" alt=""
+                            class="img-for w15 sq roundc g-nm bgb40  mr5 m_m_w16  m_m_mr2 " :for="5">
+                    </div>
+                    <button
+                        class="card-btn cap  w80  cap sq20 fs14 bgb80 b0 cw round2x pointer b ph10 m_m_w100 m_m_p0 m_m_fs12">become
+                        a championfor nature &gt;&gt;</button>
+                </div>
+            </grid_nm>
+
+        </div>
+        <grid_nm bind>
+            <h1 class="join-community-h1 cap fs24 bold cb80 pv30 l m_fs22">why join our earth tube?</h1>
+            <div class="join-community w33 pv20 l m_w50 m_m_w100 " :for="6">
+                <h1 class="join-community-h1 cap fs24 bold cb80 pv20 m_fs22">join the community</h1>
+                <div class="join-community-p fs16 cb50 w90 b500 m_m_fs14">Lorem ipsum, dolor sit amet consectetur
+                    adipisicing
+                    elit. Repellat, perferendis, labore molestiae praesentium laboriosam magnam vel ducimus!</div>
+            </div>
+        </grid_nm>
+        <div class="alertathon-contain bgb5 round2x pv20 ">
+            <grid_nm class="alertathon w100   ph20 l round2x">
+                <!-- <div class="img-alertathone w50 vm"> -->
+                <img src="" alt="" class="alertathon-img w50 m_w100 sq70 bgb30 round2x vm m_sq50">
+                <!-- </div> -->
+                <div class="alertathon-desc w50 m_w100 ph40 l  vm ">
+                    <h1 class="alertathon-h1 cap fs24 m_fs20 bold cb80 pv20 ">in alertathon</h1>
+                    <div class="alertathon-p fs16 m_m_fs14 cb50  b500">Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit.
+                        Repudiandae facere rem ab eaque voluptatem ipsum esse dicta perspiciatis voluptatibus sint
+                        incidunt temporibus quisquam, blanditiis atque earum consequatur placeat, inventore optio!</div>
+                    <grid_nm class="pv30 ">
+                        <img src="../images/one-piece-virtud.jpg" alt=""
+                            class="img-char w10 m_m_w20 sq bgb50 roundc vm">
+                        <div class="char-info vm ph20 m_w80">
+                            <h2 class="char-h2 cap fs24 m_fs22 bold cb80 pv 20 ">moemen</h2>
+                            <div class="char-p fs16 m_m_fs14 cb50  b500">web developper</div>
+                        </div>
+                    </grid_nm>
+                </div>
+
+
+            </grid_nm>
+
+
+        </div>
+        <grid bind>
+            <div class="testimonials-contain w50 ph20 pv60 l" :for="2">
+                <div class="testimonilas-desc fs16 cb50  b500 ">Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Reiciendis porro enim ducimus amet pariatur officia debitis laudantium nihil id ipsum minima
+                    deleniti quasi consequatur inventore ipsa, accusantium ratione! Unde, necessitatibus?</div>
+                <grid_nm class="pv30 ">
+                    <img src="../images/one-piece-virtud.jpg" alt="" class="img-char w10 m_m_w20 sq bgb50 roundc vm">
+                    <div class="char-info vm ph20 m_w80">
+                        <h2 class="char-h2 cap fs24 m_fs22 bold cb80 pv 20 ">moemen</h2>
+                        <div class="char-p fs16 m_m_fs14 cb50  b500">web developper</div>
+                    </div>
+                </grid_nm>
+            </div>
+        </grid>
+        <div class="join-team-contain  pv40">
+            <div class="join-team bgb90 round2x c pv20 ">
+                <div class="join-team-desc cw b500 fs16 m_m_fs14 m_m_w90 w70  pv20 g_nm  c">Lorem ipsum dolor sit amet
+                    consectetur
+                    adipisicing elit. Quasi, fugiat hic. Quae, aliquam delectus vitae saepe fugiat voluptas eos
+                    doloribus cum aliquid laborum explicabo? Officiis quo nulla nemo reprehenderit corporis.</div>
+                <div class="g w100">
+                    <button class="desc-btn cap sq40 fs14 bgw80 b0 ph20 cb80 round2x pointer  b ">learn more</button>
+                </div>
+            </div>
+        </div>
+        <div class="founders-contain pv40 ">
+            <h1 class="founders-h1 cap fs24 bold cb80 pv20 l"> founders</h1>
+            <grid_nm bind>
+                <div class="founders-img-contain pr20  w25" :for="4">
+                    <img src="../images/1099923.jpg" alt="" class="w100 sq50 bgb50 round2x">
+                </div>
+            </grid_nm>
+        </div>
+
+
+    </div>
+    <div class="footer-contain bgb5">
+        <div class="flexi">
+            <grid class="pv60">
+                <div class="image-contain w30  l pv20   ">
+                    <img src="../images/attack-on-titan-20.jpg" alt="" class="w70 sq50 border  round2x vm">
+                </div>
+                <div class="about-contain w25 vt l cap ph10">
+                    <h1 class="about-h1  fs20 bold cb80 pv10 ">about</h1>
+                    <div class="about-list fs16 cb30  b500">
+                        <p class="about-p pv5">scout for sDGs</p>
+                        <p class="about-p pv5">educational resources</p>
+                        <p class="about-p pv5">media</p>
+                        <p class="about-p pv5">scout for sDGs</p>
+                        <p class="about-p pv5">the sDGs</p>
+                        <p class="about-p pv5">contact us</p>
+
+                    </div>
+                </div>
+                <div class="challenges-contain w25 vt l cap ph10">
+                    <h1 class="challenges-h1  fs20 bold cb80 pv10 ">challenges</h1>
+                    <p class="challenges-p w90 fs16 cb30  b500 lh30">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Voluptates sint assumenda ad. Sit odit aut, facilis cumque eligendi saepe temporibus nam?
+                    </p>
+                </div>
+                <div class="social-media-contain w20 vt l cap ph10">
+                    <h1 class="social-media-h1  fs20 bold cb80 pv10">social media</h1>
+                    <div class="socila-list fs16 cb30  b500">
+                        <p class="social-p pv5">twitter</p>
+                        <p class="social-p pv5">facebook</p>
+                        <p class="social-p pv5">instagram</p>
+                        <p class="social-p pv5">onlyfans</p>
+                        <p class="social-p pv5">linkedin</p>
+                        <p class="social-p pv5">youtube</p>
+                    </div>
+                </div>
+            </grid>
+            <grid_nm class="terms-contain bt pv25">
+                <div class="terms w70 vm pv10 cap r">
+                    <grid_nm>
+                        <div class="cookies w25 fs16 cb30  b600 c">cookies</div>
+                        <div class="privacy-policy w25 fs16 cb30  b600 c">privacy policy</div>
+                        <div class="term-us w25 fs16 cb30  b600 c">term us</div>
+                        <div class="child w25 fs16 cb30  b600 c">children</div>
+                    </grid_nm>
+                </div>
+                <div class="pic-contain w30 r">
+                    <img src="../images/OCAEkY.jpg" alt="" class="w50 sq50 round2x vm">
+                </div>
+            </grid_nm>
+        </div>
+
+    </div>
+
+</div>
+<script>
+</script>

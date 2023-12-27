@@ -1,0 +1,15 @@
+<style></style>
+<div >
+    <button class="m50 fs30 cb" @click="myVar++">
+        <span>myVar</span>
+    </button>
+    <span class="fs25">{{myVar}}</span>
+</div>
+<script>
+    var myVar = 1;
+    watch = {
+        'myVar': function () {
+           alert('changing');
+        }
+    };
+</script>

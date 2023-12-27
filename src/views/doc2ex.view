@@ -1,0 +1,23 @@
+<style>
+    
+   
+</style>
+<div class="btn-contain pv100 hv33">
+    <div  class="show-text"></div>
+    <button  @mouse-up="hide" @mouse-down="show"  style="border:none" class="btn-ex g_nm ph30 pv10 b round fs16 pointer btn-main ">mouse </button>
+    <p class="poniter r fs18 text h cc mt50">hello</p>
+
+
+</div>
+<script>
+    function hide(){
+       
+      document.getElementsByClassName("text")[0].style.display="none";
+    }
+    function show(){
+       
+        document.getElementsByClassName("text")[0].style.display="block";
+      }
+
+
+</script>

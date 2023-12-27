@@ -1,0 +1,75 @@
+<style>
+    /*.flexi {
+        background-color: #150124;
+    }*/
+
+    .bea-h1 {
+        letter-spacing: 0.2em;
+
+
+    }
+
+    .video-bea {
+        object-fit: cover;
+    }
+
+    .bea-h1 span {
+        opacity: 0;
+        animation: animate 1s linear forwards;
+    }
+
+    @keyframes animate {
+        0% {
+            opacity: 0;
+            transform: rotateY(90deg);
+            filter: blur(10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: rotateY(0deg);
+            filter: blur(0);
+        }
+    }
+
+    .bea-h1 span:nth-child(1) {
+        animation-delay: 0.75s;
+    }
+
+    .bea-h1 span:nth-child(2) {
+        animation-delay: 1.25s;
+    }
+
+    .bea-h1 span:nth-child(3) {
+        animation-delay: 1.75s;
+    }
+
+    .bea-h1 span:nth-child(4) {
+        animation-delay: 2s;
+    }
+
+    .bea-h1 span:nth-child(5) {
+        animation-delay: 2.25s;
+    }
+
+    .bea-h1 span:nth-child(6) {
+        animation-delay: 2.5s;
+    }
+
+    .bea-h1 span:nth-child(7) {
+        animation-delay: 2.75s;
+    }
+</style>
+<div class=" bgb oh">
+    <video src="../images/smoke.mp4 " class="video-bea " autoplay muted></video>
+    <h1 class="cap bea-h1 cc fs50 cw c w100 ">
+        <span class="g_nm">b</span>
+        <span class="g_nm">e</span>
+        <span class="g_nm">a</span>
+        <span class="pl40 g_nm">t</span>
+        <span class="g_nm">e</span>
+        <span class="g_nm">c</span>
+        <span class="g_nm">h</span>
+    </h1>
+</div>
+<script></script>

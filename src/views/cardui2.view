@@ -1,0 +1,428 @@
+<style>
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/beach-background_090607511_305.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+
+    }
+
+    .card-content {
+        background: rgb(86, 196, 229);
+        background: linear-gradient(160deg, rgba(86, 196, 229, 1) 0%, rgba(65, 162, 188, 1) 35%, rgba(21, 121, 156, 1) 100%);
+        border-radius: 2rem;
+    }
+
+    .card-content-3 {
+        background: rgb(52, 230, 231);
+        background: linear-gradient(160deg, rgba(52, 230, 231, 1) 0%, rgba(52, 230, 231, 1) 35%, rgba(26, 130, 137, 1) 100%);
+        border-radius: 2rem;
+    }
+
+    .card-content-2 {
+        background: rgb(221, 145, 30);
+        background: linear-gradient(152deg, rgba(221, 145, 30, 1) 0%, rgba(210, 171, 76, 1) 35%, rgba(167, 88, 41, 1) 100%);
+        border-radius: 2rem;
+
+    }
+
+    .cardd {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/card1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-right-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+
+
+
+    }
+
+    .card-1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/photo-1596706269630-8f480cb67f12.avif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-right-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+
+    }
+
+    .card-2 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/WhatsApp\ Image\ 2023-11-08\ at\ 11.54.54\ AM.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-right-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+
+    }
+
+    .country-cards {
+        color: #6bcde6;
+        letter-spacing: 3px;
+
+    }
+
+    .country-cards-1 {
+        color: orange;
+        letter-spacing: 3px;
+    }
+
+    .country-cards-2 {
+        color: rgb(52, 230, 231);
+    }
+
+    .card-head {
+        min-height: 25vh;
+    }
+
+    .card-middle {
+        min-height: 40vh;
+    }
+
+
+    .country-desc,
+    .country-desc-2 {
+        color: #6bcde6;
+    }
+
+    .country-desc-1 {
+        color: orange;
+    }
+
+    .card-nav {
+        background: rgb(14, 37, 44);
+        background: linear-gradient(180deg, rgb(14, 37, 44) 9%, rgba(4, 11, 12, 1) 35%, rgba(4, 8, 9, 1) 100%);
+        border-bottom-right-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+    }
+
+    .surf {
+        background-image: linear-gradient(to right, rgb(0, 140, 255), rgb(0, 225, 255));
+    }
+
+    .dive {
+        background-image: linear-gradient(to right, #45E2E2, #3DF8F8);
+    }
+
+    .hike {
+        background: linear-gradient(to right, #FF8540, #FFC958);
+    }
+
+    .card-swipe {
+        height: 7px;
+        background-color: rgba(94, 192, 216, 0.589);
+    }
+
+    .card-swipe.active {
+        background-color: #3AFFFF;
+    }
+
+    .card-swipe-1.active {
+        background-color: #ffcc14;
+    }
+
+    .card-swipe-2.active {
+        background-color: #3AFFFF;
+
+    }
+
+    .card-swipe-1 {
+        height: 7px;
+        background-color: #746636
+    }
+
+    .card-swipe-2 {
+        height: 7px;
+        background-color: rgba(94, 192, 216, 0.589);
+    }
+
+    .card-swipe-1:hover,
+    .card-swipe:hover,
+    .card-swipe-2:hover {
+        transition: 0.5s all;
+    }
+
+    .card-swipe-1:hover {
+        background-color: #ffcc14;
+    }
+
+    .card-swipe:hover,
+    .card-swipe-2:hover {
+        background-color: #3AFFFF;
+    }
+
+    .nav-span:hover {
+        color: aliceblue;
+    }
+</style>
+<div class="content">
+    <div class="flexi">
+        <grid_nm class="" bind>
+            <div class="cards-1  ph20 pv30 w30 md_w45 m_w60 m_m_w100">
+                <div class="card-content p15 ">
+                    <div class="cardd back  p15 ">
+                        <div class="card-head pb40">
+                            <grid_nm>
+                                <div class="w50 l ">
+                                    <div class="surf  upper i round4x ph10 pv4 b600 w50 c ">surf</div>
+                                </div>
+                                <div class="wonder w50 r i cw40 b700">wonder</div>
+                            </grid_nm>
+                        </div>
+                        <div class="card-middle vb pt40">
+                            <grid_nm>
+                                <div class="info-cards w80">
+                                    <div class="country-cards b600 upper l  fs14 cw"> japan</div>
+                                    <div class="details-country cap l fs22 w90 cw b600">ericieria</div>
+                                    <div class="country-desc fs12 b800  cap l pt10 ">see you later,eren</div>
+                                </div>
+                                <div class="icons w20 fs16 ">
+                                    <div class=" pv5 pointer">
+                                        <span
+                                            class="mdi mdi-weather-windy lh40  bgb40 p5 cw80 fs24 border db roundc"></span>
+                                    </div>
+                                    <div class="pv5 pointer">
+                                        <span
+                                            class="mdi mdi-map-legend     lh40 bgb40 p5 cw80 fs24 border db roundc"></span>
+                                    </div>
+                                    <div class="pv5 pointer">
+                                        <span
+                                            class="mdi mdi-heart-outline  lh40 bgb40 p5 cw80 fs24 border db roundc "></span>
+                                    </div>
+                                    <div class="pv5 pointer">
+                                        <span
+                                            class="mdi mdi-upload-outline lh40  bgb40 p5 cw80 fs24 border db roundc "></span>
+                                    </div>
+                                </div>
+                            </grid_nm>
+                            <grid_nm pv20>
+                                <div class="card-swipe-content w25 pv30 ph3">
+                                    <div class="card-swipe swiping-div pointer round4x active" @click="swiper"
+                                        data-id="1"></div>
+                                </div>
+                                <div class="card-swipe-content w25 pv30 ph3">
+                                    <div class="card-swipe swiping-div pointer round4x " @click="swiper" data-id="2">
+                                    </div>
+                                </div>
+                                <div class="card-swipe-content w25 pv30 ph3">
+                                    <div class="card-swipe swiping-div pointer round4x " @click="swiper" data-id="3">
+                                    </div>
+                                </div>
+                                <div class="card-swipe-content w25 pv30 ph3">
+                                    <div class="card-swipe swiping-div pointer round4x " @click="swiper" data-id="4">
+                                    </div>
+                                </div>
+                            </grid_nm>
+                        </div>
+                    </div>
+                    <div class="card-nav pt10 pb20 ">
+                        <grid_nm>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-map-marker-outline fs18"></span>
+                                <div class="nav-p b600 fs14">explore</div>
+                            </div>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-airplane-takeoff fs18"></span>
+                                <div class="nav-p b600 fs14">trips</div>
+                            </div>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-account fs18 "></span>
+                                <div class="nav-p b600 fs14">profile</div>
+                            </div>
+                        </grid_nm>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-2  ph20 pv30 w30 md_w45 m_w60 m_m_w100">
+                <div class="card-content-2 p15 ">
+                    <div class="card-1 back p15 ">
+                        <div class="card-head pb40">
+                            <grid_nm>
+                                <div class="w50 l">
+                                    <div class="hike  upper i round4x ph10 pv4 b600 w50 c ">hike</div>
+                                </div>
+                                <div class="wonder w50 r i cw40 b700">wonder</div>
+                            </grid_nm>
+                        </div>
+                        <div class="card-middle vb pt40">
+                            <grid_nm>
+                                <div class="info-cards w80">
+                                    <div class="country-cards-1 b600 upper l  fs14 "> austria</div>
+                                    <div class="details-country cap l fs22 w90 cw b600">wachau</div>
+                                    <div class="country-desc-1 fs12 b800  cap pt10 l ">see you later,eren</div>
+                                </div>
+                                <div class="icons w20 fs16 ">
+                                    <div class="  pv5 pointer">
+                                        <span
+                                            class="mdi mdi-weather-windy lh40  bgb40 p5 cw80 fs24 border db roundc pointer"></span>
+                                    </div>
+                                    <div class=" pv5 pointer">
+                                        <span
+                                            class="mdi mdi-map-legend     lh40 bgb40 p5 cw80 fs24 border db roundc"></span>
+                                    </div>
+                                    <div class=" pv5 pointer">
+                                        <span
+                                            class="mdi mdi-heart-outline  lh40 bgb40 p5 cw80 fs24 border db roundc "></span>
+                                    </div>
+                                    <div class=" pv5 pointer">
+                                        <span
+                                            class="mdi mdi-upload-outline lh40 bgb40 p5 cw80 fs24 border db roundc "></span>
+                                    </div>
+                                </div>
+                            </grid_nm>
+                            <grid_nm pv20>
+                                <div class="card-swipe-1-content w25 pv30 ph3">
+                                    <div class="card-swipe-1 swiping-div round4x pointer active " @click="swiper"
+                                        data-id="1">
+                                    </div>
+                                </div>
+                                <div class="card-swipe-1-content w25 pv30 ph3">
+                                    <div class="card-swipe-1 swiping-div round4x pointer  " @click="swiper" data-id="2">
+                                    </div>
+                                </div>
+                                <div class="card-swipe-1-content w25 pv30 ph3">
+                                    <div class="card-swipe-1 swiping-div round4x pointer  " @click="swiper" data-id="3">
+                                    </div>
+                                </div>
+                                <div class="card-swipe-1-content w25 pv30 ph3">
+                                    <div class="card-swipe-1 swiping-div round4x pointer  " @click="swiper" data-id="4">
+                                    </div>
+                                </div>
+                            </grid_nm>
+                        </div>
+                    </div>
+                    <div class="card-nav pb20 pt10">
+                        <grid_nm>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-map-marker-outline fs18"></span>
+                                <div class="nav-p b600 fs14">explore</div>
+                            </div>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-airplane-takeoff fs18"></span>
+                                <div class="nav-p b600 fs14">trips</div>
+                            </div>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-account fs18"></span>
+                                <div class="nav-p b600 fs14">profile</div>
+                            </div>
+                        </grid_nm>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-3 ph20 pv30 w30 md_w45 m_w60 m_m_w100">
+                <div class="card-content-3 p15 ">
+                    <div class="card-2 back   p15 ">
+                        <div class="card-head pb40">
+                            <grid_nm>
+                                <div class="w50 l">
+                                    <div class="dive  upper i round4x ph10 pv4 b600 w50 c ">dive</div>
+                                </div>
+                                <div class="wonder w50 r i cw40 b700">wonder</div>
+                            </grid_nm>
+                        </div>
+                        <div class="card-middle vb pt40">
+                            <grid_nm>
+                                <div class="info-cards w80">
+                                    <div class="country-cards-2 b600 upper l  fs14 cw">malaysa</div>
+                                    <div class="details-country cap l fs22 w90 cw b600">redang island</div>
+                                    <div class="country-desc-2 fs12 b800  cap l pt10 ">see you later,eren</div>
+                                </div>
+                                <div class="icons w20 fs16 ">
+                                    <div class=" pv5 pointer">
+                                        <span
+                                            class="mdi mdi-weather-windy lh40  bgb40 p5 cw80 fs24 border db roundc"></span>
+                                    </div>
+                                    <div class=" pv5 pointer">
+                                        <span
+                                            class="mdi mdi-map-legend    lh40  bgb40 p5 cw80 fs24 border db roundc"></span>
+                                    </div>
+                                    <div class="pv5 pointer">
+                                        <span
+                                            class="mdi mdi-heart-outline  lh40 bgb40 p5 cw80 fs24 border db roundc "></span>
+                                    </div>
+                                    <div class="pv5 pointer">
+                                        <span
+                                            class="mdi mdi-upload-outline lh40 bgb40 p5 cw80 fs24 border db roundc "></span>
+                                    </div>
+                                </div>
+                            </grid_nm>
+                            <grid_nm pv20>
+                                <div class="card-swipe-2-content w25 pv30 ph3 ">
+                                    <div class="card-swipe-2 swiping-div round4x pointer active " @click="swiper"
+                                        data-id="1">
+                                    </div>
+                                </div>
+                                <div class="card-swipe-2-content w25 pv30 ph3 ">
+                                    <div class="card-swipe-2 swiping-div round4x pointer " @click="swiper" data-id="2">
+                                    </div>
+                                </div>
+                                <div class="card-swipe-2-content w25 pv30 ph3 ">
+                                    <div class="card-swipe-2 swiping-div round4x pointer " @click="swiper" data-id="3">
+                                    </div>
+                                </div>
+                                <div class="card-swipe-2-content w25 pv30 ph3 ">
+                                    <div class="card-swipe-2 swiping-div round4x pointer " @click="swiper" data-id="4">
+                                    </div>
+                                </div>
+                            </grid_nm>
+                        </div>
+                    </div>
+                    <div class="card-nav pb20 pt10 ">
+                        <grid_nm>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-map-marker-outline fs18"></span>
+                                <div class="nav-p b600 fs14">explore</div>
+                            </div>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-airplane-takeoff fs18 "></span>
+                                <div class="nav-p b600 fs14">trips</div>
+                            </div>
+                            <div class="nav-span w30  cap cw40 pointer">
+                                <span class="mdi mdi-account fs18"></span>
+                                <div class="nav-p b600 fs14">profile</div>
+                            </div>
+                        </grid_nm>
+                    </div>
+                </div>
+            </div>
+        </grid_nm>
+    </div>
+</div>
+<script>
+    function swiper(ev, el) {
+        var card = el.closest('.back');
+        card.find('.swiping-div').removeClass('active');
+        el.addClass('active')
+
+        let id = el.data('id');
+        el[0].closest('.back').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/card${id}.jpg)`;
+    }
+
+
+    // $(document).ready(function () {
+    //
+    //     $(".card-swipe, .card-swipe-1, .card-swipe-2").click(function () {
+    //         // Find the common ancestor with class 'card-swipe-content', 'card-swipe-1-content', or 'card-swipe-2-content'
+    //         var container = $(this).closest('.card-swipe-content, .card-swipe-1-content, .card-swipe-2-content');
+    //
+    //         // Remove 'active' class from all elements within the common ancestor
+    //         container.find('.card-swipe, .card-swipe-1, .card-swipe-2').removeClass('active');
+    //
+    //         // Add 'active' class to the clicked element
+    //         $(this).addClass('active');
+    //     });
+    // });
+
+    //function swiper(ev, el) {
+    //    var cardSwipe = document.querySelectorAll('.card-swipe');
+    //    cardSwipe.forEach(function (divSwipe) {
+    //        divSwipe.classList.remove('active');
+    //    });
+    //
+    //    el[0].classList.add('active');
+    // let id = el[0].dataset.id;
+    //cardContain.style.backgroundImage = `url(../images/card${id}.jpg) `;
+    //   }
+</script>
