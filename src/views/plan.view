@@ -1,0 +1,76 @@
+<style>
+    .bread-crumbs-wrapper .PageTracker {
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(7, 28, 38, .2);
+        box-shadow: 0 5px 10px #071c2633;
+        border-radius: 50px;
+        overflow: hidden;
+        background: #ffffff;
+        z-index: 1;
+    }
+
+    .bread-crumbs-wrapper .PageTracker li:first-of-type {
+        border-radius: 50px 0 0 50px;
+    }
+
+    .bread-crumbs-wrapper .PageTracker li {
+        position: relative;
+    }
+
+    .Fluid-Row__item {
+        display: table-cell;
+        white-space: nowrap;
+        width: 1%;
+        vertical-align: middle;
+    }
+
+    .bread-crumbs-wrapper .PageTracker li a {
+        position: relative;
+        overflow: hidden;
+        font-size: 14px;
+        color: #677983;
+        text-decoration: none;
+        padding: 10px !important;
+    }
+
+    .bread-crumbs-wrapper .PageTracker li:before {
+        top: -8px;
+        border-top: 29px solid transparent;
+        border-bottom: 29px solid transparent;
+        border-left: 13px solid #677983;
+    }
+
+    .bread-crumbs-wrapper .PageTracker li:before,
+    .bread-crumbs-wrapper .PageTracker li:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    .bread-crumbs-wrapper .PageTracker li:after {
+        top: -8px;
+        right: 1px;
+        border-top: 29px solid transparent;
+        border-bottom: 29px solid transparent;
+        border-left: 13px solid #fff;
+    }
+
+    .bread-crumbs-wrapper .PageTracker li:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+</style>
+<div class="bread-crumbs-wrapper db c w70 m-x-auto m-y-5">
+    <h1 class="t-4 t-c-w100 m-bottom-3">Sign up for Shared Hosting</h1>
+    <ul class="PageTracker List l-pos-relative t-center t-2 t-bold">
+        <div class="PageTracker__filled"></div>
+        <li class="Fluid-Row__item pr is-active"><a href="" class="db c-w70" data-small="Plans"><span>Pick a
+                    plan</span></a></li>
+        <li class="Fluid-Row__item pr"><a href="" class="db c-w70" data-small="Domain"><span>Choose a domain</span></a>
+        </li>
+        <li class="Fluid-Row__item pr r0"><a href="" class="db c-w70" data-small="Payment"><span>Secure
+                    Checkout</span></a></li>
+    </ul>
+</div>
